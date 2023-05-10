@@ -1,0 +1,15 @@
+<h3 class="text-center"> {{title}}</h3>
+<form (ngSubmit)="agregarPersonaje()">
+    <div class="form-floating mb-2">
+        <input type="text" class="form-control" placeholder="Nombre Personaje" [(ngModel)]="personajenuevo.nombre"
+            name="nombre">
+        <label>Nombre personaje</label>
+    </div>
+    <div class="form-floating my-2">
+        <input type="number" class="form-control" placeholder="Poder" [(ngModel)]="personajenuevo.poder" name="poder">
+        <label>Poder</label>
+    </div>
+    <div class="my-2">
+        <button type="submit" class="btn btn-dark">Agregar</button>
+    </div>
+</form>

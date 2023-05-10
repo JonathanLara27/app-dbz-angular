@@ -1,0 +1,16 @@
+<h3 class="text-center"> {{title}}</h3>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-content-center"
+        *ngFor="let personaje of data; let i=index; let isFirst =first; let isLast= last" [ngClass]="{
+        'list-group-item-success': isFirst,
+        'list-group-item-dark': isLast
+    }">
+        <div>
+            <span class="text-danger"> {{i+1}}. </span>
+            <span> {{personaje.nombre}} -</span>
+            <b> Poder: </b>
+            <span> {{personaje.poder}} </span>
+        </div>
+        <button class="btn btn-danger" (click)="eliminarPersonaje(personaje.id)">X</button>
+    </li>
+</ul>

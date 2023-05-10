@@ -1,0 +1,12 @@
+<h1 class="text-bg-danger text-center">Personajes DBZ</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <app-form-agregar-personaje
+                (eventoNuevoPersonaje)="agregarNuevoPersonaje($event)"></app-form-agregar-personaje>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <app-dbz-listado [data]="personajes" (deleteIndex)="eliminarPersonaje($event)"></app-dbz-listado>
+        </div>
+    </div>
+</div>
